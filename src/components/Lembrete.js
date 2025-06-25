@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { Swipeable } from 'react-native-gesture-handler';
+import moment from 'moment-timezone';
+
 
 export default function Lembrete({ item, onDelete }) {
     const renderRightActions = () => (
@@ -14,6 +16,9 @@ export default function Lembrete({ item, onDelete }) {
             <View style={styles.card}>
                 <Text style={styles.titulo}>{item.nome}</Text>
                 <Text style={styles.descricao}>{item.desc}</Text>
+                <Text style={styles.data}>
+                    {moment(item.data).tz('America/Sao_Paulo').format('DD/MM/YYYY')}
+                </Text>
             </View>
         </Swipeable>
     );

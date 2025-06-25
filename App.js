@@ -1,12 +1,11 @@
 import React from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Text, View } from "react-native";
-import SwipeTest from "./SwipeTest";
+import ListaLembretes from "./src/screens/ListaLembretes";
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <SwipeTest />
+      <ListaLembretes />
     </GestureHandlerRootView>
   );
 }
